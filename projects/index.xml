@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Projects on </title>
-    <link>zhouwenx1224.github.io/projects/</link>
+    <link>/projects/</link>
     <description>Recent content in Projects on </description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 27 Feb 2023 20:20:12 -0500</lastBuildDate><atom:link href="zhouwenx1224.github.io/projects/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 27 Feb 2023 20:20:12 -0500</lastBuildDate><atom:link href="/projects/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Reggie Food Delivery System</title>
-      <link>zhouwenx1224.github.io/projects/asrhui12/</link>
+      <link>/projects/asrhui12/</link>
       <pubDate>Mon, 27 Feb 2023 20:20:12 -0500</pubDate>
       
-      <guid>zhouwenx1224.github.io/projects/asrhui12/</guid>
+      <guid>/projects/asrhui12/</guid>
       <description>Reggie Food Delivery System 🫶 Backend System 💡 Employee Management: Login, Logout Add Modify List Disable, Enable 💡: Category management: Add Modify List Delete 💡: Cuisine Management: Add Modify List Delete Stop sale, start sale 💡: Package Management: Add Modify List Delete Stop Sale, Start Sale 💡: Order details List Status operations ✂️ Mobile(Front) application Cell phone number login with Verification Code Personal Center Address Management Order History Browse dishes, packages Shopping Cart Add to cart Empty cart Place an order ✂️ Mobile(Front) and Management(Backend) Demo </description>
     </item>
     
     <item>
       <title>Math Braintrainer</title>
-      <link>zhouwenx1224.github.io/projects/math-brain-trainer/</link>
+      <link>/projects/math-brain-trainer/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>zhouwenx1224.github.io/projects/math-brain-trainer/</guid>
+      <guid>/projects/math-brain-trainer/</guid>
       <description> </description>
     </item>
     
