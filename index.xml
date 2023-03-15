@@ -25,38 +25,12 @@
     </item>
     
     <item>
-      <title>Surprise Surprise</title>
-      <link>/articles/article/</link>
+      <title>My LeetCode Diary - Day1 Arrays</title>
+      <link>/articles/day1-arrays-my-leetcode-diary/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/articles/article/</guid>
-      <description>Thank you for your support! Hello. If you like this template, I&amp;rsquo;d be happy to get a coffee donation :)</description>
-    </item>
-    
-    <item>
-      <title>Surprise1</title>
-      <link>/articles/fsdfs/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/articles/fsdfs/</guid>
-      <description>二二维 public class Main { public static void main(String[] args) { System.out.println(&amp;#34;Hello world!&amp;#34;); } } dasdasdas
-Watching for changes in /Users/zwx/blog/zhoublog/{assets,content,data,layouts,static,themes} Watching for config changes in /Users/zwx/blog/zhoublog/config.toml, /Users/zwx/blog/zhoublog/themes/charlolamode/config.yml Environment: &amp;ldquo;development&amp;rdquo; Serving pages from memory Running in Fast Render Mode. For full rebuilds on change: hugo server &amp;ndash;disableFastRender Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)</description>
-    </item>
-    
-    <item>
-      <title>测试</title>
-      <link>/articles/%E6%B5%8B%E8%AF%95%E8%B4%A6%E5%8F%B7/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/articles/%E6%B5%8B%E8%AF%95%E8%B4%A6%E5%8F%B7/</guid>
-      <description>测试账号 账号：test1——密码：1234——车位1
-账号：test2——密码：1234——车位2
-账号：test3——密码：1234——车位3
-账号：test4——密码：1234——车位4
-账号：test5——密码：1234——车位5
-账号：test6——密码：1234——车位6
-账号：test7——密码：1234——车位7
-账号：test8——密码：1234——车位8</description>
+      <guid>/articles/day1-arrays-my-leetcode-diary/</guid>
+      <description>Day1 Arrays - My LeetCode Diary int[] myNum = {10, 20, 30, 40}; //Loop Through an Array for (int i = 0; i &amp;lt; myNum.length; i++) { System.out.println(myNum[i]); } //OR for (int i : myNum) { System.out.println(i); } int[][] myNumbers = { {1, 2, 3, 4}, {5, 6, 7} }; System.out.println(myNumbers[1][2]); // Outputs 7 //Loop Through Multi-Dimensional Arrays for (int i = 0; i &amp;lt; myNumbers.length; ++i) { for(int j = 0; j &amp;lt; myNumbers[i].</description>
     </item>
     
   </channel>
