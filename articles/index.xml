@@ -37,5 +37,15 @@ Thus, we use two pointers to index both side of the input arrays.</description>
 /** * Definition for singly-linked list. * public class ListNode { * int val; * ListNode next; * ListNode() {} * ListNode(int val) { this.val = val; } * ListNode(int val, ListNode next) { this.val = val; this.next = next; } * } */ class Solution { public ListNode removeElements(ListNode head, int val) { // [1，1，1，1，1，1，1] while (head !</description>
     </item>
     
+    <item>
+      <title>My LeetCode Diary - Day4 LinkedList</title>
+      <link>/articles/my-leetcode-diary-day4-linkedlist/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/articles/my-leetcode-diary-day4-linkedlist/</guid>
+      <description>My LeetCode Diary - Day4 LinkedList 24. Swap Nodes in Pairs Link
+/** * Definition for singly-linked list. * public class ListNode { * int val; * ListNode next; * ListNode() {} * ListNode(int val) { this.val = val; } * ListNode(int val, ListNode next) { this.val = val; this.next = next; } * } */ class Solution { public ListNode swapPairs(ListNode head) { ListNode dummy = new ListNode(-1); dummy.next = head; ListNode cur = dummy; ListNode temp; //node3 ListNode first; //node1 ListNode second; //node2 while (cur.</description>
+    </item>
+    
   </channel>
 </rss>
