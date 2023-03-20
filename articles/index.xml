@@ -47,5 +47,16 @@ Thus, we use two pointers to index both side of the input arrays.</description>
 /** * Definition for singly-linked list. * public class ListNode { * int val; * ListNode next; * ListNode() {} * ListNode(int val) { this.val = val; } * ListNode(int val, ListNode next) { this.val = val; this.next = next; } * } */ class Solution { public ListNode swapPairs(ListNode head) { ListNode dummy = new ListNode(-1); dummy.next = head; ListNode cur = dummy; ListNode temp; //node3 ListNode first; //node1 ListNode second; //node2 while (cur.</description>
     </item>
     
+    <item>
+      <title>My LeetCode Diary - Day6 HashTable</title>
+      <link>/articles/my-leetcode-diary-day6-hashtable/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/articles/my-leetcode-diary-day6-hashtable/</guid>
+      <description>My LeetCode Diary - Day6 HashTable 242. Valid Anagram Link
+class Solution { public boolean isAnagram(String s, String t) { int[] hash = new int[26]; for (int i=0;i&amp;lt;s.length();i++) { hash[s.charAt(i)-&amp;#39;a&amp;#39;]++; } for (int i=0; i&amp;lt;t.length(); i++){ hash[t.charAt(i)-&amp;#39;a&amp;#39;]--; } for (int num : hash){ if (num != 0) { return false; } } return true; } } 202. Happy Number Link
+class Solution { public boolean isHappy(int n) { HashSet&amp;lt;Integer&amp;gt; seen = new HashSet&amp;lt;&amp;gt;(); while (n!</description>
+    </item>
+    
   </channel>
 </rss>
