@@ -77,5 +77,16 @@ class Solution { public boolean isAnagram(String s, String t) { int[] hash = new
 class Solution { public boolean isHappy(int n) { HashSet&amp;lt;Integer&amp;gt; seen = new HashSet&amp;lt;&amp;gt;(); while (n!</description>
     </item>
     
+    <item>
+      <title>My LeetCode Diary - Day7 HashTable</title>
+      <link>/articles/my-leetcode-diary-day7-hashtable/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/articles/my-leetcode-diary-day7-hashtable/</guid>
+      <description>My LeetCode Diary - Day7 HashTable 454. 4Sum II Link
+nums1 = [1,2], nums2 = [-2,-1], nums3 = [-1,2], nums4 = [0,2]
+Iterated over nums1 and nums2, pairSums = {1 + (-2), 1 + (-1), 2 + (-2), 2 + (-1)} = {-1, 0, 0, 1} pairCountBySum = {-1 : 1, 0 : 2, 1 : 1}, i.e. there is 1 pair with sum = 1, 2 pairs with sum = 0, 1 pair with sum = -1</description>
+    </item>
+    
   </channel>
 </rss>
