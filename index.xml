@@ -99,5 +99,15 @@ class Solution { public void reverseString(char[] s) { char[] newArray = new cha
 class Solution { public String reverseStr(String s, int k) { StringBuilder sb = new StringBuilder(); while (s.</description>
     </item>
     
+    <item>
+      <title>My LeetCode Diary - Day9 String KMP</title>
+      <link>/articles/my-leetcode-diary-day9-string-kmp/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/articles/my-leetcode-diary-day9-string-kmp/</guid>
+      <description>My LeetCode Diary - Day9 String KMP 28. Find the Index of the First Occurrence in a String Link
+class Solution { public String reverseWords(String s) { String ans = &amp;#34;&amp;#34;; int start = -1, end = -1; for (int i = s.length() - 1; i&amp;gt;=0; i--){ if(s.charAt(i) != &amp;#39; &amp;#39; &amp;amp;&amp;amp; end == -1){ end = i; } else if(s.charAt(i) == &amp;#39; &amp;#39; &amp;amp;&amp;amp; end != -1){ start = i + 1; ans = ans + s.</description>
+    </item>
+    
   </channel>
 </rss>
