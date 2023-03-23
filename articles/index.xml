@@ -15,6 +15,16 @@
     </item>
     
     <item>
+      <title>My LeetCode Diary - Day10 Stack&amp;Queue</title>
+      <link>/articles/my-leetcode-diary-day10-stackqueue-8b12181fb3ca42acb73e15d61a96003a/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/articles/my-leetcode-diary-day10-stackqueue-8b12181fb3ca42acb73e15d61a96003a/</guid>
+      <description>My LeetCode Diary - Day10 Stack&amp;amp;Queue 232. Implement Queue using Stacks Link
+class MyQueue { Stack&amp;lt;Integer&amp;gt; inStack; Stack&amp;lt;Integer&amp;gt; outStack; public MyQueue() { this.inStack = new Stack&amp;lt;&amp;gt;(); this.outStack = new Stack&amp;lt;&amp;gt;(); } public void push(int x) { while(!outStack.isEmpty()){ inStack.push(outStack.pop()); } inStack.push(x); while(!inStack.isEmpty()){ outStack.push(inStack.pop()); } } public int pop() { if(outStack.isEmpty()){ return -1; } return outStack.pop(); } public int peek() { if(outStack.isEmpty()){ return -1; } return outStack.peek(); } public boolean empty() { return outStack.</description>
+    </item>
+    
+    <item>
       <title>My LeetCode Diary - Day2 Arrays</title>
       <link>/articles/my-leetcode-diary-day2-arrays/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
