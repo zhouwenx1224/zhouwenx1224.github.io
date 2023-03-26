@@ -35,6 +35,16 @@ class Solution { public boolean isValid(String s) { Deque&amp;lt;Character&amp;g
     </item>
     
     <item>
+      <title>My LeetCode Diary - Day12 Stack&amp;Queue</title>
+      <link>/articles/my-leetcode-diary-day12-stackqueue/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/articles/my-leetcode-diary-day12-stackqueue/</guid>
+      <description>My LeetCode Diary - Day12 Stack&amp;amp;Queue 239. Sliding Window Maximum Link
+class MyQueue { Deque&amp;lt;Integer&amp;gt; deque = new LinkedList&amp;lt;&amp;gt;(); void poll(int val) { if (!deque.isEmpty() &amp;amp;&amp;amp; val == deque.peek()) { deque.poll(); } } void add(int val) { while (!deque.isEmpty() &amp;amp;&amp;amp; val &amp;gt; deque.getLast()){ deque.removeLast(); } deque.add(val); } int peek() { return deque.peek(); } } class Solution { public int[] maxSlidingWindow(int[] nums, int k) { if (nums.length == 1){ return nums; } int len = nums.</description>
+    </item>
+    
+    <item>
       <title>My LeetCode Diary - Day2 Arrays</title>
       <link>/articles/my-leetcode-diary-day2-arrays/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
