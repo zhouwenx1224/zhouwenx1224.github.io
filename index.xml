@@ -64,6 +64,16 @@ class MyQueue { Deque&amp;lt;Integer&amp;gt; deque = new LinkedList&amp;lt;&amp;
     </item>
     
     <item>
+      <title>My LeetCode Diary - Day13 BinaryTree</title>
+      <link>/articles/my-leetcode-diary-day13-binarytree/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/articles/my-leetcode-diary-day13-binarytree/</guid>
+      <description>My LeetCode Diary - Day13 BinaryTree 144. Binary Tree Preorder Traversal Link
+class Solution { public List&amp;lt;Integer&amp;gt; preorderTraversal(TreeNode root) { List&amp;lt;Integer&amp;gt; result = new ArrayList&amp;lt;Integer&amp;gt;(); preorder(root,result); return result; } public void preorder(TreeNode root, List&amp;lt;Integer&amp;gt; result) { if (root == null){ return; } result.add(root.val); preorder(root.left, result); preorder(root.right,result); } } class Solution { public List&amp;lt;Integer&amp;gt; preorderTraversal(TreeNode root) { Stack&amp;lt;TreeNode&amp;gt; stack = new Stack&amp;lt;&amp;gt;(); List&amp;lt;Integer&amp;gt; result = new ArrayList&amp;lt;&amp;gt;(); if (root == null) { return result; } stack.</description>
+    </item>
+    
+    <item>
       <title>My LeetCode Diary - Day2 Arrays</title>
       <link>/articles/my-leetcode-diary-day2-arrays/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
