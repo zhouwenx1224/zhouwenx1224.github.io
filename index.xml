@@ -74,6 +74,16 @@ class Solution { public List&amp;lt;Integer&amp;gt; preorderTraversal(TreeNode r
     </item>
     
     <item>
+      <title>My LeetCode Diary - Day14 BinaryTree</title>
+      <link>/articles/my-leetcode-diary-day14-binarytree/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/articles/my-leetcode-diary-day14-binarytree/</guid>
+      <description>My LeetCode Diary - Day14 BinaryTree 102. Binary Tree Level Order Traversal Link
+class Solution { public List&amp;lt;List&amp;lt;Integer&amp;gt;&amp;gt; resList = new ArrayList&amp;lt;List&amp;lt;Integer&amp;gt;&amp;gt;(); public List&amp;lt;List&amp;lt;Integer&amp;gt;&amp;gt; levelOrder(TreeNode root) { checkFun(root); return resList; } public void checkFun(TreeNode node) { if (node == null) { return; } Queue&amp;lt;TreeNode&amp;gt; que = new LinkedList&amp;lt;TreeNode&amp;gt;(); que.offer(node); while(!que.isEmpty()) { List&amp;lt;Integer&amp;gt; itemList = new ArrayList&amp;lt;&amp;gt;(); int len = que.size(); while (len&amp;gt;0) { TreeNode tmpNode = que.poll(); itemList.add(tmpNode.val); if (tmpNode.left !</description>
+    </item>
+    
+    <item>
       <title>My LeetCode Diary - Day2 Arrays</title>
       <link>/articles/my-leetcode-diary-day2-arrays/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
