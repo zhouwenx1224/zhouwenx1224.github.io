@@ -76,6 +76,16 @@ class Solution { public int minDepth(TreeNode root) { if (root == null) { return
     </item>
     
     <item>
+      <title>My LeetCode Diary - Day17 BinaryTree</title>
+      <link>/articles/my-leetcode-diary-day17-binarytree/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/articles/my-leetcode-diary-day17-binarytree/</guid>
+      <description>My LeetCode Diary - Day16 BinaryTree 110. Balanced Binary Tree Link
+class Solution { /** * 优化迭代法，针对暴力迭代法的getHeight方法做优化，利用TreeNode.val来保存当前结点的高度，这样就不会有重复遍历 * 获取高度算法时间复杂度可以降到O(1)，总的时间复杂度降为O(n)。 * 时间复杂度：O(n) */ public boolean isBalanced(TreeNode root) { if (root == null) { return true; } Stack&amp;lt;TreeNode&amp;gt; stack = new Stack&amp;lt;&amp;gt;(); TreeNode pre = null; while (root != null || !stack.isEmpty()) { while (root != null) { stack.push(root); root = root.left; } TreeNode inNode = stack.peek(); // 右结点为null或已经遍历过 if (inNode.right == null || inNode.</description>
+    </item>
+    
+    <item>
       <title>My LeetCode Diary - Day2 Arrays</title>
       <link>/articles/my-leetcode-diary-day2-arrays/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
