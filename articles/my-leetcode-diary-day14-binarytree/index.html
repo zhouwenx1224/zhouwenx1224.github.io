@@ -130,7 +130,7 @@
     <div class="post-description">
       Click on me to see the content.
     </div>
-    <div class="post-meta">1 min&nbsp;·&nbsp;Wenxiong Zhou</div>
+    <div class="post-meta">2 min&nbsp;·&nbsp;Wenxiong Zhou</div>
   </header> <div class="toc">
     <details >
         <summary accesskey="c" title="(Alt + C)">
@@ -143,11 +143,11 @@
                         <ul>
                         
                 <li>
-                    <a href="#102binary-tree-level-order-traversal" aria-label="102. Binary Tree Level Order Traversal"><strong>102. Binary Tree Level Order Traversal</strong></a></li>
+                    <a href="#144binary-tree-preorder-traversal" aria-label="144. Binary Tree Preorder Traversal"><strong>144. Binary Tree Preorder Traversal</strong></a></li>
                 <li>
-                    <a href="#226invert-binary-tree" aria-label="226. Invert Binary Tree"><strong>226. Invert Binary Tree</strong></a></li>
+                    <a href="#145binary-tree-postorder-traversal" aria-label="145. Binary Tree Postorder Traversal"><strong>145. Binary Tree Postorder Traversal</strong></a></li>
                 <li>
-                    <a href="#101symmetric-tree" aria-label="101. Symmetric Tree"><strong>101. Symmetric Tree</strong></a>
+                    <a href="#94binary-tree-inorder-traversal" aria-label="94. Binary Tree Inorder Traversal"><strong>94. Binary Tree Inorder Traversal</strong></a>
                 </li>
             </ul>
             </ul>
@@ -159,73 +159,128 @@
 
   <div class="post-content">
   <h1 id="my-leetcode-diary---day14-binarytree">My LeetCode Diary - Day14 BinaryTree</h1>
-<h3 id="102binary-tree-level-order-traversal"><strong>102. Binary Tree Level Order Traversal</strong></h3>
-<p><a href="https://leetcode.com/problems/binary-tree-level-order-traversal/">Link</a></p>
+<p><img loading="lazy" src="/images/day13.png" alt="images"  />
+</p>
+<h3 id="144binary-tree-preorder-traversal"><strong>144. Binary Tree Preorder Traversal</strong></h3>
+<p><a href="https://leetcode.com/problems/binary-tree-preorder-traversal/">Link</a></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> List<span style="color:#f92672">&lt;</span>List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;&gt;</span> resList <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;</span>List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;&gt;();</span>
-</span></span><span style="display:flex;"><span>    
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> List<span style="color:#f92672">&lt;</span>List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;&gt;</span> <span style="color:#a6e22e">levelOrder</span><span style="color:#f92672">(</span>TreeNode root<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>        checkFun<span style="color:#f92672">(</span>root<span style="color:#f92672">);</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> resList<span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">preorderTraversal</span><span style="color:#f92672">(</span>TreeNode root<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> result <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;();</span>
+</span></span><span style="display:flex;"><span>        preorder<span style="color:#f92672">(</span>root<span style="color:#f92672">,</span>result<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> result<span style="color:#f92672">;</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">checkFun</span><span style="color:#f92672">(</span>TreeNode node<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>node <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">preorder</span><span style="color:#f92672">(</span>TreeNode root<span style="color:#f92672">,</span> List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> result<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>root <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">){</span>
 </span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span><span style="color:#f92672">;</span>
 </span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span>        Queue<span style="color:#f92672">&lt;</span>TreeNode<span style="color:#f92672">&gt;</span> que <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> LinkedList<span style="color:#f92672">&lt;</span>TreeNode<span style="color:#f92672">&gt;();</span>
-</span></span><span style="display:flex;"><span>        que<span style="color:#f92672">.</span><span style="color:#a6e22e">offer</span><span style="color:#f92672">(</span>node<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        result<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>root<span style="color:#f92672">.</span><span style="color:#a6e22e">val</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        preorder<span style="color:#f92672">(</span>root<span style="color:#f92672">.</span><span style="color:#a6e22e">left</span><span style="color:#f92672">,</span> result<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        preorder<span style="color:#f92672">(</span>root<span style="color:#f92672">.</span><span style="color:#a6e22e">right</span><span style="color:#f92672">,</span>result<span style="color:#f92672">);</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span><span style="color:#f92672">(!</span>que<span style="color:#f92672">.</span><span style="color:#a6e22e">isEmpty</span><span style="color:#f92672">())</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>            List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> itemList <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;&gt;();</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">int</span> len <span style="color:#f92672">=</span> que<span style="color:#f92672">.</span><span style="color:#a6e22e">size</span><span style="color:#f92672">();</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>len<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">0</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>                TreeNode tmpNode <span style="color:#f92672">=</span> que<span style="color:#f92672">.</span><span style="color:#a6e22e">poll</span><span style="color:#f92672">();</span>
-</span></span><span style="display:flex;"><span>                itemList<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>tmpNode<span style="color:#f92672">.</span><span style="color:#a6e22e">val</span><span style="color:#f92672">);</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>tmpNode<span style="color:#f92672">.</span><span style="color:#a6e22e">left</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>                    que<span style="color:#f92672">.</span><span style="color:#a6e22e">offer</span><span style="color:#f92672">(</span>tmpNode<span style="color:#f92672">.</span><span style="color:#a6e22e">left</span><span style="color:#f92672">);</span>
-</span></span><span style="display:flex;"><span>                <span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>tmpNode<span style="color:#f92672">.</span><span style="color:#a6e22e">right</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>                    que<span style="color:#f92672">.</span><span style="color:#a6e22e">offer</span><span style="color:#f92672">(</span>tmpNode<span style="color:#f92672">.</span><span style="color:#a6e22e">right</span><span style="color:#f92672">);</span>
-</span></span><span style="display:flex;"><span>                <span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span>                len<span style="color:#f92672">--;</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span>            resList<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>itemList<span style="color:#f92672">);</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
 </span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
-</span></span></code></pre></div><h3 id="226invert-binary-tree"><strong>226. Invert Binary Tree</strong></h3>
-<p><a href="https://leetcode.com/problems/invert-binary-tree/">Link</a></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> TreeNode <span style="color:#a6e22e">invertTree</span><span style="color:#f92672">(</span>TreeNode root<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">preorderTraversal</span><span style="color:#f92672">(</span>TreeNode root<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        Stack<span style="color:#f92672">&lt;</span>TreeNode<span style="color:#f92672">&gt;</span> stack <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Stack<span style="color:#f92672">&lt;&gt;();</span>
+</span></span><span style="display:flex;"><span>        List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> result <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;&gt;();</span>
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>root <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> result<span style="color:#f92672">;</span>
 </span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span>        invertTree<span style="color:#f92672">(</span>root<span style="color:#f92672">.</span><span style="color:#a6e22e">left</span><span style="color:#f92672">);</span>
-</span></span><span style="display:flex;"><span>        invertTree<span style="color:#f92672">(</span>root<span style="color:#f92672">.</span><span style="color:#a6e22e">right</span><span style="color:#f92672">);</span>
-</span></span><span style="display:flex;"><span>        swapChildren<span style="color:#f92672">(</span>root<span style="color:#f92672">);</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> root<span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">swapChildren</span><span style="color:#f92672">(</span>TreeNode root<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>        TreeNode tmp <span style="color:#f92672">=</span> root<span style="color:#f92672">.</span><span style="color:#a6e22e">left</span><span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span>        root<span style="color:#f92672">.</span><span style="color:#a6e22e">left</span> <span style="color:#f92672">=</span> root<span style="color:#f92672">.</span><span style="color:#a6e22e">right</span><span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span>        root<span style="color:#f92672">.</span><span style="color:#a6e22e">right</span> <span style="color:#f92672">=</span> tmp<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        stack<span style="color:#f92672">.</span><span style="color:#a6e22e">push</span><span style="color:#f92672">(</span>root<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> <span style="color:#f92672">(!</span>stack<span style="color:#f92672">.</span><span style="color:#a6e22e">isEmpty</span><span style="color:#f92672">())</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            TreeNode node <span style="color:#f92672">=</span> stack<span style="color:#f92672">.</span><span style="color:#a6e22e">pop</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>            result<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>node<span style="color:#f92672">.</span><span style="color:#a6e22e">val</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>node<span style="color:#f92672">.</span><span style="color:#a6e22e">right</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>                stack<span style="color:#f92672">.</span><span style="color:#a6e22e">push</span><span style="color:#f92672">(</span>node<span style="color:#f92672">.</span><span style="color:#a6e22e">right</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>node<span style="color:#f92672">.</span><span style="color:#a6e22e">left</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>                stack<span style="color:#f92672">.</span><span style="color:#a6e22e">push</span><span style="color:#f92672">(</span>node<span style="color:#f92672">.</span><span style="color:#a6e22e">left</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> result<span style="color:#f92672">;</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
 </span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
-</span></span></code></pre></div><h3 id="101symmetric-tree"><strong>101. Symmetric Tree</strong></h3>
-<p><a href="https://leetcode.com/problems/symmetric-tree/">Link</a></p>
+</span></span></code></pre></div><h3 id="145binary-tree-postorder-traversal"><strong>145. Binary Tree Postorder Traversal</strong></h3>
+<p><a href="https://leetcode.com/problems/binary-tree-postorder-traversal/">Link</a></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">isEquivalent</span><span style="color:#f92672">(</span>TreeNode left<span style="color:#f92672">,</span> TreeNode right<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>left<span style="color:#f92672">==</span><span style="color:#66d9ef">null</span> <span style="color:#f92672">||</span> right<span style="color:#f92672">==</span><span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#66d9ef">return</span> left <span style="color:#f92672">==</span> right<span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">return</span> left<span style="color:#f92672">.</span><span style="color:#a6e22e">val</span> <span style="color:#f92672">==</span> right<span style="color:#f92672">.</span><span style="color:#a6e22e">val</span> <span style="color:#f92672">&amp;&amp;</span> isEquivalent<span style="color:#f92672">(</span>left<span style="color:#f92672">.</span><span style="color:#a6e22e">left</span><span style="color:#f92672">,</span> right<span style="color:#f92672">.</span><span style="color:#a6e22e">right</span><span style="color:#f92672">)</span> <span style="color:#f92672">&amp;&amp;</span> isEquivalent<span style="color:#f92672">(</span>left<span style="color:#f92672">.</span><span style="color:#a6e22e">right</span><span style="color:#f92672">,</span> right<span style="color:#f92672">.</span><span style="color:#a6e22e">left</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">postorderTraversal</span><span style="color:#f92672">(</span>TreeNode root<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> result <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;();</span>
+</span></span><span style="display:flex;"><span>        postOrder<span style="color:#f92672">(</span>root<span style="color:#f92672">,</span> result<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> result<span style="color:#f92672">;</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">isSymmetric</span><span style="color:#f92672">(</span>TreeNode root<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> isEquivalent<span style="color:#f92672">(</span>root<span style="color:#f92672">.</span><span style="color:#a6e22e">left</span><span style="color:#f92672">,</span> root<span style="color:#f92672">.</span><span style="color:#a6e22e">right</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">postOrder</span><span style="color:#f92672">(</span>TreeNode root<span style="color:#f92672">,</span> List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> result<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>root <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>        postOrder<span style="color:#f92672">(</span>root<span style="color:#f92672">.</span><span style="color:#a6e22e">left</span><span style="color:#f92672">,</span>result<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        postOrder<span style="color:#f92672">(</span>root<span style="color:#f92672">.</span><span style="color:#a6e22e">right</span><span style="color:#f92672">,</span>result<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        result<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>root<span style="color:#f92672">.</span><span style="color:#a6e22e">val</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><p><img loading="lazy" src="/images/day13-1.png" alt="images"  />
+</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">postorderTraversal</span><span style="color:#f92672">(</span>TreeNode root<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        Stack<span style="color:#f92672">&lt;</span>TreeNode<span style="color:#f92672">&gt;</span> stack <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Stack<span style="color:#f92672">&lt;&gt;();</span>
+</span></span><span style="display:flex;"><span>        List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> result <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;&gt;();</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>root <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">){</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> result<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>        stack<span style="color:#f92672">.</span><span style="color:#a6e22e">push</span><span style="color:#f92672">(</span>root<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> <span style="color:#f92672">(!</span>stack<span style="color:#f92672">.</span><span style="color:#a6e22e">isEmpty</span><span style="color:#f92672">())</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            TreeNode node <span style="color:#f92672">=</span> stack<span style="color:#f92672">.</span><span style="color:#a6e22e">pop</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>            result<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>node<span style="color:#f92672">.</span><span style="color:#a6e22e">val</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>node<span style="color:#f92672">.</span><span style="color:#a6e22e">left</span><span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>                stack<span style="color:#f92672">.</span><span style="color:#a6e22e">push</span><span style="color:#f92672">(</span>node<span style="color:#f92672">.</span><span style="color:#a6e22e">left</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>node<span style="color:#f92672">.</span><span style="color:#a6e22e">right</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">){</span>
+</span></span><span style="display:flex;"><span>                stack<span style="color:#f92672">.</span><span style="color:#a6e22e">push</span><span style="color:#f92672">(</span>node<span style="color:#f92672">.</span><span style="color:#a6e22e">right</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>        Collections<span style="color:#f92672">.</span><span style="color:#a6e22e">reverse</span><span style="color:#f92672">(</span>result<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> result<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>       
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><h3 id="94binary-tree-inorder-traversal"><strong>94. Binary Tree Inorder Traversal</strong></h3>
+<p><a href="https://leetcode.com/problems/binary-tree-inorder-traversal/#">Link</a></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">inorderTraversal</span><span style="color:#f92672">(</span>TreeNode root<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> result <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;();</span>
+</span></span><span style="display:flex;"><span>        inOrder<span style="color:#f92672">(</span>root<span style="color:#f92672">,</span> result<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> result<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">inOrder</span><span style="color:#f92672">(</span>TreeNode root<span style="color:#f92672">,</span> List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> result<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>root <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>        inOrder<span style="color:#f92672">(</span>root<span style="color:#f92672">.</span><span style="color:#a6e22e">left</span><span style="color:#f92672">,</span> result<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        result<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>root<span style="color:#f92672">.</span><span style="color:#a6e22e">val</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        inOrder<span style="color:#f92672">(</span>root<span style="color:#f92672">.</span><span style="color:#a6e22e">right</span><span style="color:#f92672">,</span> result<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">inorderTraversal</span><span style="color:#f92672">(</span>TreeNode root<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        Stack<span style="color:#f92672">&lt;</span>TreeNode<span style="color:#f92672">&gt;</span> stack <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Stack<span style="color:#f92672">&lt;&gt;();</span>
+</span></span><span style="display:flex;"><span>        List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> result <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;&gt;();</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>root <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> result<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>        TreeNode cur <span style="color:#f92672">=</span> root<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>cur <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">||</span> <span style="color:#f92672">!</span>stack<span style="color:#f92672">.</span><span style="color:#a6e22e">isEmpty</span><span style="color:#f92672">()){</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>cur <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">){</span>
+</span></span><span style="display:flex;"><span>                stack<span style="color:#f92672">.</span><span style="color:#a6e22e">push</span><span style="color:#f92672">(</span>cur<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>                cur <span style="color:#f92672">=</span> cur<span style="color:#f92672">.</span><span style="color:#a6e22e">left</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>                cur <span style="color:#f92672">=</span> stack<span style="color:#f92672">.</span><span style="color:#a6e22e">pop</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>                result<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>cur<span style="color:#f92672">.</span><span style="color:#a6e22e">val</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>                cur <span style="color:#f92672">=</span> cur<span style="color:#f92672">.</span><span style="color:#a6e22e">right</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> result<span style="color:#f92672">;</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
 </span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
 </span></span></code></pre></div>

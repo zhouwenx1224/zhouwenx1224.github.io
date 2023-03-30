@@ -45,23 +45,34 @@ class MyQueue { Deque&amp;lt;Integer&amp;gt; deque = new LinkedList&amp;lt;&amp;
     </item>
     
     <item>
-      <title>My LeetCode Diary - Day13 BinaryTree</title>
-      <link>/articles/my-leetcode-diary-day13-binarytree/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/articles/my-leetcode-diary-day13-binarytree/</guid>
-      <description>My LeetCode Diary - Day13 BinaryTree 144. Binary Tree Preorder Traversal Link
-class Solution { public List&amp;lt;Integer&amp;gt; preorderTraversal(TreeNode root) { List&amp;lt;Integer&amp;gt; result = new ArrayList&amp;lt;Integer&amp;gt;(); preorder(root,result); return result; } public void preorder(TreeNode root, List&amp;lt;Integer&amp;gt; result) { if (root == null){ return; } result.add(root.val); preorder(root.left, result); preorder(root.right,result); } } class Solution { public List&amp;lt;Integer&amp;gt; preorderTraversal(TreeNode root) { Stack&amp;lt;TreeNode&amp;gt; stack = new Stack&amp;lt;&amp;gt;(); List&amp;lt;Integer&amp;gt; result = new ArrayList&amp;lt;&amp;gt;(); if (root == null) { return result; } stack.</description>
-    </item>
-    
-    <item>
       <title>My LeetCode Diary - Day14 BinaryTree</title>
       <link>/articles/my-leetcode-diary-day14-binarytree/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/articles/my-leetcode-diary-day14-binarytree/</guid>
-      <description>My LeetCode Diary - Day14 BinaryTree 102. Binary Tree Level Order Traversal Link
+      <description>My LeetCode Diary - Day14 BinaryTree 144. Binary Tree Preorder Traversal Link
+class Solution { public List&amp;lt;Integer&amp;gt; preorderTraversal(TreeNode root) { List&amp;lt;Integer&amp;gt; result = new ArrayList&amp;lt;Integer&amp;gt;(); preorder(root,result); return result; } public void preorder(TreeNode root, List&amp;lt;Integer&amp;gt; result) { if (root == null){ return; } result.add(root.val); preorder(root.left, result); preorder(root.right,result); } } class Solution { public List&amp;lt;Integer&amp;gt; preorderTraversal(TreeNode root) { Stack&amp;lt;TreeNode&amp;gt; stack = new Stack&amp;lt;&amp;gt;(); List&amp;lt;Integer&amp;gt; result = new ArrayList&amp;lt;&amp;gt;(); if (root == null) { return result; } stack.</description>
+    </item>
+    
+    <item>
+      <title>My LeetCode Diary - Day15 BinaryTree</title>
+      <link>/articles/my-leetcode-diary-day15-binarytree/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/articles/my-leetcode-diary-day15-binarytree/</guid>
+      <description>My LeetCode Diary - Day15 BinaryTree 102. Binary Tree Level Order Traversal Link
 class Solution { public List&amp;lt;List&amp;lt;Integer&amp;gt;&amp;gt; resList = new ArrayList&amp;lt;List&amp;lt;Integer&amp;gt;&amp;gt;(); public List&amp;lt;List&amp;lt;Integer&amp;gt;&amp;gt; levelOrder(TreeNode root) { checkFun(root); return resList; } public void checkFun(TreeNode node) { if (node == null) { return; } Queue&amp;lt;TreeNode&amp;gt; que = new LinkedList&amp;lt;TreeNode&amp;gt;(); que.offer(node); while(!que.isEmpty()) { List&amp;lt;Integer&amp;gt; itemList = new ArrayList&amp;lt;&amp;gt;(); int len = que.size(); while (len&amp;gt;0) { TreeNode tmpNode = que.poll(); itemList.add(tmpNode.val); if (tmpNode.left !</description>
+    </item>
+    
+    <item>
+      <title>My LeetCode Diary - Day16 BinaryTree</title>
+      <link>/articles/my-leetcode-diary-day16-binarytree/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/articles/my-leetcode-diary-day16-binarytree/</guid>
+      <description>My LeetCode Diary - Day16 BinaryTree 104. Maximum Depth of Binary Tree Link
+class solution { public int maxDepth(TreeNode root) { if (root == null) { return 0; } int leftDepth = maxDepth(root.left); int rightDepth = maxDepth(root.right); return Math.max(leftDepth, rightDepth) + 1; } } 111. Minimum Depth of Binary Tree Link
+class Solution { public int minDepth(TreeNode root) { if (root == null) { return 0; } int leftDepth = minDepth(root.</description>
     </item>
     
     <item>
