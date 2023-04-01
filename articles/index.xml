@@ -86,6 +86,17 @@ class Solution { /** * 优化迭代法，针对暴力迭代法的getHeight方法
     </item>
     
     <item>
+      <title>My LeetCode Diary - Day18 BinaryTree</title>
+      <link>/articles/my-leetcode-diary-day18-binarytree/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/articles/my-leetcode-diary-day18-binarytree/</guid>
+      <description>My LeetCode Diary - Day18 BinaryTree 513. Find Bottom Left Tree Value Link
+class Solution { public int findBottomLeftValue(TreeNode root) { Queue&amp;lt;TreeNode&amp;gt; queue = new LinkedList&amp;lt;&amp;gt;(); queue.offer(root); while (!queue.isEmpty()){ root = queue.poll(); if (root.right != null) { queue.offer(root.right); } if (root.left != null) { queue.offer(root.left); } } return root.val; } } 112. Path Sum Link
+class Solution { public boolean hasPathSum(TreeNode root, int targetSum) { if (root == null) { return false; } targetSum -= root.</description>
+    </item>
+    
+    <item>
       <title>My LeetCode Diary - Day2 Arrays</title>
       <link>/articles/my-leetcode-diary-day2-arrays/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
