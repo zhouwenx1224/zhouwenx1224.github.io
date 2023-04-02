@@ -110,6 +110,16 @@ Thus, we use two pointers to index both side of the input arrays.</description>
     </item>
     
     <item>
+      <title>My LeetCode Diary - Day20 BinaryTree</title>
+      <link>/articles/my-leetcode-diary-day20-binarytree-f47e801dcc7e4a698801c7ea90b2d060/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/articles/my-leetcode-diary-day20-binarytree-f47e801dcc7e4a698801c7ea90b2d060/</guid>
+      <description>My LeetCode Diary - Day20 BinaryTree 654. Maximum Binary Tree Link
+class Solution { public TreeNode constructMaximumBinaryTree(int[] nums) { return constructMaximumBinaryTree1(nums, 0, nums.length); } public TreeNode constructMaximumBinaryTree1(int[] nums, int leftIndex, int rightIndex) { if (rightIndex - leftIndex &amp;lt; 1) { return null; } if (rightIndex - leftIndex == 1) { return new TreeNode(nums[leftIndex]); } int maxIndex = leftIndex; int maxVal = nums[maxIndex]; for (int i = leftIndex + 1; i &amp;lt; rightIndex; i++) { if (nums[i] &amp;gt; maxVal){ maxVal = nums[i]; maxIndex = i; } } TreeNode root = new TreeNode(maxVal); root.</description>
+    </item>
+    
+    <item>
       <title>My LeetCode Diary - Day3 LinkedList</title>
       <link>/articles/my-leetcode-diary-day3-linkedlist/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
