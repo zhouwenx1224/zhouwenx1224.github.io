@@ -8,10 +8,10 @@
     <lastBuildDate>Tue, 28 Mar 2023 20:20:12 -0500</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Smart Tracker</title>
-      <link>/projects/smart-tracker-23fab3b7d7624492809da5da3a3d4cbc/</link>
+      <link>/projects/smart_tracker/</link>
       <pubDate>Tue, 28 Mar 2023 20:20:12 -0500</pubDate>
       
-      <guid>/projects/smart-tracker-23fab3b7d7624492809da5da3a3d4cbc/</guid>
+      <guid>/projects/smart_tracker/</guid>
       <description>🫶 Smart Tracker ⭐ Architecture ⭐ Device ⭐ Functionalities Device addition and review module. The first person to add the device becomes the administrator. Other users need to be approved by the administrator before they can see the device information. Device positioning service reports data including (latitude and longitude, positioning mode, and reporting timestamp) using gcj02 coordinates globally. The device uses three positioning modes (LBS, GPS, WIFI). This positioning module directly connects to a ready-made product purchased from Taobao and used with a Raspberry Pi.</description>
     </item>
     

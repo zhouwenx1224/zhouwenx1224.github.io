@@ -5,12 +5,14 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>Projects | </title>
+<title>Smart Tracker | </title>
 <meta name="keywords" content="" />
-<meta name="description" content="This is the projects list page.">
+<meta name="description" content="Personal Project">
 <meta name="author" content="Wenxiong Zhou">
-<link rel="canonical" href="/projects/" />
+<link rel="canonical" href="/projects/smart_tracker/" />
 <link crossorigin="anonymous" href="/assets/css/stylesheet.min.7bfe087ae72df31787ec7a1360dd05ee246a179b51cf7a30a904b39d7f813b69.css" integrity="sha256-e/4Ieuct8xeH7HoTYN0F7iRqF5tRz3owqQSznX&#43;BO2k=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.min.b95bacdc39e37a332a9f883b1e78be4abc1fdca2bc1f2641f55e3cd3dabd4d61.js" integrity="sha256-uVus3DnjejMqn4g7Hni&#43;Srwf3KK8HyZB9V4809q9TWE="
+    onload="hljs.initHighlightingOnLoad();"></script>
 <link rel="icon" href="/images/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
@@ -18,7 +20,6 @@
 <link rel="mask-icon" href="/images/apple-touch-icon.png">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" type="application/rss+xml" href="/projects/index.xml">
 <noscript>
     <style>
         #theme-toggle,
@@ -58,7 +59,7 @@
 </noscript>
 </head>
 
-<body class="list" id="top">
+<body class="" id="top">
 <script>
     if (localStorage.getItem("pref-theme") === "dark") {
         document.body.classList.add('dark');
@@ -102,7 +103,7 @@
             </li>
             <li>
                 <a href="/projects/" title="Projects">
-                    <span class="active">Projects</span>
+                    <span>Projects</span>
                 </a>
             </li>
             <li>
@@ -118,55 +119,75 @@
         </ul>
     </nav>
 </header>
-<main class="main"> 
-<header class="page-header"><div class="breadcrumbs"><a href="">Home</a></div>
-  <h1>Projects</h1>
-</header>
-<div class="post-content">
-<p>This is the projects list page.</p>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="">Home</a>&nbsp;»&nbsp;<a href="/projects/">Projects</a></div>
+    <h1 class="post-title">
+      Smart Tracker
+    </h1>
+    <div class="post-description">
+      Personal Project
+    </div>
+    <div class="post-meta"><span title='2023-03-28 20:20:12 -0500 -0500'>March 28, 2023</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Wenxiong Zhou</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#-smart-tracker" aria-label="🫶 Smart Tracker">🫶 Smart Tracker</a><ul>
+                        
+                <li>
+                    <a href="#-architecture" aria-label="⭐ Architecture">⭐ Architecture</a></li>
+                <li>
+                    <a href="#-device" aria-label="⭐ Device">⭐ Device</a></li>
+                <li>
+                    <a href="#-functionalities" aria-label="⭐ Functionalities">⭐ Functionalities</a>
+                </li>
+            </ul>
+            </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content">
+  <h1 id="-smart-tracker">🫶 Smart Tracker</h1>
+<h2 id="-architecture">⭐ Architecture</h2>
+<p><img loading="lazy" src="/images/Architecture.jpg" alt="images"  />
+</p>
+<h2 id="-device">⭐ Device</h2>
+<p><img loading="lazy" src="/images/Device.jpeg" alt="images"  />
+</p>
+<h2 id="-functionalities">⭐ Functionalities</h2>
+<ul>
+<li>Device addition and review module. The first person to add the device becomes the administrator. Other users need to be approved by the administrator before they can see the device information.</li>
+<li>Device positioning service reports data including (latitude and longitude, positioning mode, and reporting timestamp) using gcj02 coordinates globally. The  device uses three positioning modes (LBS, GPS, WIFI). This positioning module directly connects to a ready-made product purchased from Taobao and used with a Raspberry Pi. If the address resolution is based on wifi positioning, the Baidu hardware module is used for processing. For LBS and GPS positioning, Baidu reverse address resolution is used. When developing this module, we set three positioning modes (standby, normal, and emergency), and users can adjust the data reporting interval according to their needs. The device information reported will be transmitted via MQTT protocol and received by the server, then the message will be put into RabbitMQ for consumption and finally displayed to the user.</li>
+<li>Electronic fence function, which is also the core function. During the initial development phase, we used the fence algorithm provided by Baidu Maps, but we found that the calculation was very limited. In the end, we developed our own algorithm. The main function is to set a designated electronic fence for children or elderly people wearing the device. When they leave the electronic fence, the mobile phone will sound an alarm. Two types of fences were used in development: circular fence, with the origin as the center and the radius as the distance, and polygon fence, using point connection method to determine whether the device&rsquo;s latitude and longitude is within the fence. If the device leaves the electronic fence, a WeChat subscription template will be pushed. This module uses the one-time subscription template of WeChat. There is also an on-site message reminder in the mini program.</li>
+<li>Historical trajectory, according to the device&rsquo;s daily trajectory, using Tencent&rsquo;s built-in components for trajectory rendering, similar to Amap&rsquo;s daily trajectory.</li>
+<li>Handholding mode. This module uses a near Bluetooth module to connect Bluetooth. If the Bluetooth is disconnected, an alarm will be triggered on the mobile phone.</li>
+</ul>
+<p><img loading="lazy" src="/images/demo.png" alt="images"  />
+</p>
+<p><img loading="lazy" src="/images/demo1.png" alt="images"  />
+</p>
+
+  </div>
+
+  <footer class="post-footer">
+
+<div class="share-buttons">
+
+
+
 
 </div>
 
-
-  <article class="post-entry"> 
-    <header class="entry-header">
-      <h2>Smart Tracker
-      </h2>
-    </header>
-    <section class="entry-content">
-      <p>Personal Project...</p>
-    </section>
-    <footer class="entry-footer"><span title='2023-03-28 20:20:12 -0500 -0500'>March 28, 2023</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Wenxiong Zhou</footer>
-    <a class="entry-link" aria-label="post link to Smart Tracker" href="/projects/smart_tracker/"></a>
-</article>
-
-
-  <article class="post-entry"> 
-    <header class="entry-header">
-      <h2>Reggie Food Delivery System
-      </h2>
-    </header>
-    <section class="entry-content">
-      <p>Java, Java Web, MySQL, Spring Boot, SSM(Spring, Spring MVC, MyBatis), Maven</p>
-    </section>
-    <footer class="entry-footer"><span title='2023-02-27 20:20:12 -0500 EST'>February 27, 2023</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Wenxiong Zhou</footer>
-    <a class="entry-link" aria-label="post link to Reggie Food Delivery System" href="/projects/food/"></a>
-</article>
-
-
-  <article class="post-entry"> 
-    <header class="entry-header">
-      <h2>Math Braintrainer
-      </h2>
-    </header>
-    <section class="entry-content">
-      <p>It&#39;s a game to train your mental calculation skills. During a fixed time period, randomized math questions pop up. How many of them can you answer correctly?</p>
-    </section>
-    <section class="entry-content">
-      <img src="/images/braintrainer.png">
-    </section>
-    <footer class="entry-footer">0 min&nbsp;·&nbsp;Wenxiong Zhou</footer>
-    <a class="entry-link" aria-label="post link to Math Braintrainer" href="/projects/math-brain-trainer/"></a>
+  </footer>
 </article>
     </main>
     
@@ -234,6 +255,53 @@
         }
     })
 
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerText = 'copy';
+
+        function copyingDone() {
+            copybutton.innerText = 'copied!';
+            setTimeout(() => {
+                copybutton.innerText = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
 </script>
 </body>
 
