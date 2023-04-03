@@ -139,7 +139,7 @@
 
         <div class="inner"><ul>
                 <li>
-                    <a href="#-smart-tracker" aria-label="🫶 Smart Tracker">🫶 Smart Tracker</a><ul>
+                    <a href="#smart-tracker" aria-label="Smart Tracker">Smart Tracker</a><ul>
                         
                 <li>
                     <a href="#-architecture" aria-label="⭐ Architecture">⭐ Architecture</a></li>
@@ -156,14 +156,14 @@
 </div>
 
   <div class="post-content">
-  <h1 id="-smart-tracker">🫶 Smart Tracker</h1>
-<h2 id="-architecture">⭐ Architecture</h2>
+  <h2 id="smart-tracker">Smart Tracker</h2>
+<h3 id="-architecture">⭐ Architecture</h3>
 <p><img loading="lazy" src="/images/Architecture.jpg" alt="images"  />
 </p>
-<h2 id="-device">⭐ Device</h2>
+<h3 id="-device">⭐ Device</h3>
 <p><img loading="lazy" src="/images/Device.jpeg" alt="images"  />
 </p>
-<h2 id="-functionalities">⭐ Functionalities</h2>
+<h3 id="-functionalities">⭐ Functionalities</h3>
 <ul>
 <li>Device addition and review module. The first person to add the device becomes the administrator. Other users need to be approved by the administrator before they can see the device information.</li>
 <li>Device positioning service reports data including (latitude and longitude, positioning mode, and reporting timestamp) using gcj02 coordinates globally. The  device uses three positioning modes (LBS, GPS, WIFI). This positioning module directly connects to a ready-made product purchased from Taobao and used with a Raspberry Pi. If the address resolution is based on wifi positioning, the Baidu hardware module is used for processing. For LBS and GPS positioning, Baidu reverse address resolution is used. When developing this module, we set three positioning modes (standby, normal, and emergency), and users can adjust the data reporting interval according to their needs. The device information reported will be transmitted via MQTT protocol and received by the server, then the message will be put into RabbitMQ for consumption and finally displayed to the user.</li>
