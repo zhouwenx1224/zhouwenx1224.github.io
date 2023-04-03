@@ -3,12 +3,15 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>/</loc>
-    <lastmod>2023-02-27T20:20:12-05:00</lastmod>
+    <lastmod>2023-03-28T20:20:12-05:00</lastmod>
   </url><url>
     <loc>/projects/</loc>
-    <lastmod>2023-02-27T20:20:12-05:00</lastmod>
+    <lastmod>2023-03-28T20:20:12-05:00</lastmod>
   </url><url>
-    <loc>/projects/asrhui12/</loc>
+    <loc>/projects/smart-tracker-23fab3b7d7624492809da5da3a3d4cbc/</loc>
+    <lastmod>2023-03-28T20:20:12-05:00</lastmod>
+  </url><url>
+    <loc>/projects/food/</loc>
     <lastmod>2023-02-27T20:20:12-05:00</lastmod>
   </url><url>
     <loc>/articles/</loc>
@@ -39,7 +42,9 @@
   </url><url>
     <loc>/articles/my-leetcode-diary-day2-arrays/</loc>
   </url><url>
-    <loc>/articles/my-leetcode-diary-day20-binarytree-f47e801dcc7e4a698801c7ea90b2d060/</loc>
+    <loc>/articles/my-leetcode-diary-day20-binarytree/</loc>
+  </url><url>
+    <loc>/articles/my-leetcode-diary-day21-binarytree/</loc>
   </url><url>
     <loc>/articles/my-leetcode-diary-day3-linkedlist/</loc>
   </url><url>

@@ -111,12 +111,23 @@ Thus, we use two pointers to index both side of the input arrays.</description>
     
     <item>
       <title>My LeetCode Diary - Day20 BinaryTree</title>
-      <link>/articles/my-leetcode-diary-day20-binarytree-f47e801dcc7e4a698801c7ea90b2d060/</link>
+      <link>/articles/my-leetcode-diary-day20-binarytree/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/articles/my-leetcode-diary-day20-binarytree-f47e801dcc7e4a698801c7ea90b2d060/</guid>
+      <guid>/articles/my-leetcode-diary-day20-binarytree/</guid>
       <description>My LeetCode Diary - Day20 BinaryTree 654. Maximum Binary Tree Link
 class Solution { public TreeNode constructMaximumBinaryTree(int[] nums) { return constructMaximumBinaryTree1(nums, 0, nums.length); } public TreeNode constructMaximumBinaryTree1(int[] nums, int leftIndex, int rightIndex) { if (rightIndex - leftIndex &amp;lt; 1) { return null; } if (rightIndex - leftIndex == 1) { return new TreeNode(nums[leftIndex]); } int maxIndex = leftIndex; int maxVal = nums[maxIndex]; for (int i = leftIndex + 1; i &amp;lt; rightIndex; i++) { if (nums[i] &amp;gt; maxVal){ maxVal = nums[i]; maxIndex = i; } } TreeNode root = new TreeNode(maxVal); root.</description>
+    </item>
+    
+    <item>
+      <title>My LeetCode Diary - Day21 BinaryTree</title>
+      <link>/articles/my-leetcode-diary-day21-binarytree/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/articles/my-leetcode-diary-day21-binarytree/</guid>
+      <description>My LeetCode Diary - Day21 BinaryTree 530. Minimum Absolute Difference in BST Link
+class Solution { TreeNode pre; int result = Integer.MAX_VALUE; public int getMinimumDifference(TreeNode root) { if(root==null)return 0; traversal(root); return result; } public void traversal(TreeNode root){ if(root==null)return; //左 traversal(root.left); //中 if(pre!=null){ result = Math.min(result,root.val-pre.val); } pre = root; //右 traversal(root.right); } } 501. Find Mode in Binary Search Tree Link
+class Solution { public int[] findMode(TreeNode root) { TreeNode pre = null; Stack&amp;lt;TreeNode&amp;gt; stack = new Stack&amp;lt;&amp;gt;(); List&amp;lt;Integer&amp;gt; result = new ArrayList&amp;lt;&amp;gt;(); int maxCount = 0; int count = 0; TreeNode cur = root; while (cur !</description>
     </item>
     
     <item>
