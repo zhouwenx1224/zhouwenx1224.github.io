@@ -159,6 +159,17 @@ class Solution { public int[] findMode(TreeNode root) { TreeNode pre = null; Sta
     </item>
     
     <item>
+      <title>My LeetCode Diary - Day22 BinaryTree</title>
+      <link>/articles/my-leetcode-diary-day22-binarytree/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/articles/my-leetcode-diary-day22-binarytree/</guid>
+      <description>My LeetCode Diary - Day22 BinaryTree 235. Lowest Common Ancestor of a Binary Search Tree Link
+class Solution { public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) { if (root.val &amp;gt; p.val &amp;amp;&amp;amp; root.val &amp;gt; q.val) return lowestCommonAncestor(root.left, p, q); if (root.val &amp;lt; p.val &amp;amp;&amp;amp; root.val &amp;lt; q.val) return lowestCommonAncestor(root.right, p, q); return root; } } 701. Insert into a Binary Search Tree Link
+class Solution { public TreeNode insertIntoBST(TreeNode root, int val) { if (root == null) return new TreeNode(val); if (root.</description>
+    </item>
+    
+    <item>
       <title>My LeetCode Diary - Day3 LinkedList</title>
       <link>/articles/my-leetcode-diary-day3-linkedlist/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
