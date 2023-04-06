@@ -142,6 +142,16 @@ class Solution { public TreeNode insertIntoBST(TreeNode root, int val) { if (roo
     </item>
     
     <item>
+      <title>My LeetCode Diary - Day23 BinaryTree</title>
+      <link>/articles/my-leetcode-diary-day23-binarytree/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/articles/my-leetcode-diary-day23-binarytree/</guid>
+      <description>My LeetCode Diary - Day23 BinaryTree 669. Trim a Binary Search Tree Link
+class Solution { public TreeNode trimBST(TreeNode root, int low, int high) { if (root == null) { return null; } if (root.val &amp;lt; low) { return trimBST(root.right, low, high); } if (root.val &amp;gt; high) { return trimBST(root.left, low, high); } root.left = trimBST(root.left, low, high); root.right = trimBST(root.right, low, high); return root; } 108. Convert Sorted Array to Binary Search Tree Link</description>
+    </item>
+    
+    <item>
       <title>My LeetCode Diary - Day3 LinkedList</title>
       <link>/articles/my-leetcode-diary-day3-linkedlist/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
