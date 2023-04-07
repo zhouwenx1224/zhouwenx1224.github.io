@@ -152,6 +152,16 @@ class Solution { public TreeNode trimBST(TreeNode root, int low, int high) { if 
     </item>
     
     <item>
+      <title>My LeetCode Diary - Day24 BackTracking</title>
+      <link>/articles/my-leetcode-diary-day24-backtracking/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/articles/my-leetcode-diary-day24-backtracking/</guid>
+      <description>My LeetCode Diary - Day24 BackTracking 77. Combinations Link
+class Solution { List&amp;lt;List&amp;lt;Integer&amp;gt;&amp;gt; result = new ArrayList&amp;lt;&amp;gt;(); LinkedList&amp;lt;Integer&amp;gt; path = new LinkedList&amp;lt;&amp;gt;(); public List&amp;lt;List&amp;lt;Integer&amp;gt;&amp;gt; combine(int n, int k) { backTracking(n,k,1); return result; } void backTracking(int n, int k, int startIndex) { if (path.size() == k) { result.add(new ArrayList&amp;lt;&amp;gt;(path)); return; } for (int i = startIndex; i &amp;lt;= n - (k-path.size()) + 1; i++) { path.add(i); backTracking(n,k,i+1); path.removeLast(); } } } </description>
+    </item>
+    
+    <item>
       <title>My LeetCode Diary - Day3 LinkedList</title>
       <link>/articles/my-leetcode-diary-day3-linkedlist/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
