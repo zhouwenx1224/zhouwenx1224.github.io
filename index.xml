@@ -200,6 +200,16 @@ class Solution { List&amp;lt;List&amp;lt;Integer&amp;gt;&amp;gt; result = new Ar
     </item>
     
     <item>
+      <title>My LeetCode Diary - Day26 BackTracking</title>
+      <link>/articles/my-leetcode-diary-day26-backtracking/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/articles/my-leetcode-diary-day26-backtracking/</guid>
+      <description>My LeetCode Diary - Day26 BackTracking 39. Combination Sum Link
+class Solution { List&amp;lt;List&amp;lt;Integer&amp;gt;&amp;gt; res = new ArrayList&amp;lt;&amp;gt;(); LinkedList&amp;lt;Integer&amp;gt; path = new LinkedList&amp;lt;&amp;gt;(); public List&amp;lt;List&amp;lt;Integer&amp;gt;&amp;gt; combinationSum(int[] candidates, int target) { backTracking(candidates, target, 0,0); return res; } void backTracking(int[] candidates, int target, int sum, int start) { if (sum == target) { res.add(new ArrayList&amp;lt;&amp;gt;(path)); return; } if (sum &amp;gt; target) { return; } for (int i = start; i &amp;lt; candidates.length; i++) { path.</description>
+    </item>
+    
+    <item>
       <title>My LeetCode Diary - Day3 LinkedList</title>
       <link>/articles/my-leetcode-diary-day3-linkedlist/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
