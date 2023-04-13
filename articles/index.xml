@@ -212,6 +212,16 @@ class Solution { List&amp;lt;List&amp;lt;Integer&amp;gt;&amp;gt; res = new Array
     </item>
     
     <item>
+      <title>My LeetCode Diary - Day30 BackTracking</title>
+      <link>/articles/my-leetcode-diary-day30-greedy-algo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/articles/my-leetcode-diary-day30-greedy-algo/</guid>
+      <description>My LeetCode Diary - Day30 Greedy Algo 455. Assign Cookies Link
+class Solution { public int findContentChildren(int[] g, int[] s) { Arrays.sort(g); Arrays.sort(s); int count = 0; //考虑大胃口 int index = s.length - 1; for (int i = g.length -1 ;i &amp;gt;=0; i--) { if (index &amp;gt;= 0 &amp;amp;&amp;amp; g[i] &amp;lt;= s[index]){ index--; count++; } } return count; } } class Solution { public int findContentChildren(int[] g, int[] s) { Arrays.</description>
+    </item>
+    
+    <item>
       <title>My LeetCode Diary - Day4 LinkedList</title>
       <link>/articles/my-leetcode-diary-day4-linkedlist/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
