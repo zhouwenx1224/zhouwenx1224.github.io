@@ -260,6 +260,16 @@ class Solution { public int maxProfit(int[] prices) { int n = prices.length; int
     </item>
     
     <item>
+      <title>My LeetCode Diary - Day34 BackTracking</title>
+      <link>/articles/my-leetcode-diary-day34-greedy-algo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/articles/my-leetcode-diary-day34-greedy-algo/</guid>
+      <description>My LeetCode Diary - Day34 Greedy Algo 1005. Maximize Sum Of Array After K Negations Link
+class Solution { public int largestSumAfterKNegations(int[] A, int K) { if (A.length == 1) return k % 2 == 0 ? A[0] : -A[0]; Arrays.sort(A); int sum = 0; int idx = 0; for (int i = 0; i &amp;lt; K; i++) { if (i &amp;lt; A.length - 1 &amp;amp;&amp;amp; A[idx] &amp;lt; 0) { A[idx] = -A[idx]; if (A[idx] &amp;gt;= Math.</description>
+    </item>
+    
+    <item>
       <title>My LeetCode Diary - Day4 LinkedList</title>
       <link>/articles/my-leetcode-diary-day4-linkedlist/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
