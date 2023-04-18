@@ -270,6 +270,16 @@ class Solution { public int largestSumAfterKNegations(int[] A, int K) { if (A.le
     </item>
     
     <item>
+      <title>My LeetCode Diary - Day35 BackTracking</title>
+      <link>/articles/my-leetcode-diary-day35-greedy-algo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/articles/my-leetcode-diary-day35-greedy-algo/</guid>
+      <description>My LeetCode Diary - Day35 Greedy Algo 860. Lemonade Change Link
+class Solution { public boolean lemonadeChange(int[] bills) { int five = 0; int ten = 0; for (int i = 0; i &amp;lt; bills.length ; i++) { if (bills[i] == 5) { five++; } else if (bills[i] == 10) { five--; ten++; } else if (bills[i] == 20) { if (ten&amp;gt;0) { ten--; five--; } else{ five -=3; } } if (five &amp;lt; 0 || ten &amp;lt; 0) { return false; } } return true; } } 406.</description>
+    </item>
+    
+    <item>
       <title>My LeetCode Diary - Day4 LinkedList</title>
       <link>/articles/my-leetcode-diary-day4-linkedlist/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
