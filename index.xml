@@ -25,6 +25,17 @@
     </item>
     
     <item>
+      <title></title>
+      <link>/articles/my-leetcode-diary-day36-greedy-algo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/articles/my-leetcode-diary-day36-greedy-algo/</guid>
+      <description>My LeetCode Diary - Day36 Greedy Algo 435. Non-overlapping Intervals Link
+class Solution { public int eraseOverlapIntervals(int[][] intervals) { Arrays.sort(intervals, (a,b)-&amp;gt; { return Integer.compare(a[0],b[0]); }); int remove = 0; int pre = intervals[0][1]; for(int i = 1; i &amp;lt; intervals.length; i++) { if(pre &amp;gt; intervals[i][0]) { remove++; pre = Math.min(pre, intervals[i][1]); } else pre = intervals[i][1]; } return remove; } } 763. Partition Labels Link
+class Solution { public List&amp;lt;Integer&amp;gt; partitionLabels(String S) { List&amp;lt;Integer&amp;gt; list = new LinkedList&amp;lt;&amp;gt;(); int[] edge = new int[26]; char[] chars = S.</description>
+    </item>
+    
+    <item>
       <title>Math Braintrainer</title>
       <link>/projects/math-brain-trainer/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -35,10 +46,10 @@
     
     <item>
       <title>My LeetCode Diary - Day1 Arrays</title>
-      <link>/articles/day1-arrays-my-leetcode-diary/</link>
+      <link>/articles/my-leetcode-diary-day01-arrays/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/articles/day1-arrays-my-leetcode-diary/</guid>
+      <guid>/articles/my-leetcode-diary-day01-arrays/</guid>
       <description>Day1 Arrays - My LeetCode Diary int[] myNum = {10, 20, 30, 40}; //Loop Through an Array for (int i = 0; i &amp;lt; myNum.length; i++) { System.out.println(myNum[i]); } //OR for (int i : myNum) { System.out.println(i); } int[][] myNumbers = { {1, 2, 3, 4}, {5, 6, 7} }; System.out.println(myNumbers[1][2]); // Outputs 7 //Loop Through Multi-Dimensional Arrays for (int i = 0; i &amp;lt; myNumbers.length; ++i) { for(int j = 0; j &amp;lt; myNumbers[i].</description>
     </item>
     
@@ -126,10 +137,10 @@ class Solution { public boolean hasPathSum(TreeNode root, int targetSum) { if (r
     
     <item>
       <title>My LeetCode Diary - Day2 Arrays</title>
-      <link>/articles/my-leetcode-diary-day2-arrays/</link>
+      <link>/articles/my-leetcode-diary-day02-arrays/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/articles/my-leetcode-diary-day2-arrays/</guid>
+      <guid>/articles/my-leetcode-diary-day02-arrays/</guid>
       <description>My LeetCode Diary - Day2 Arrays 977. Squares of a Sorted Array Link
 Example 1:
 Input: nums = [-4,-1,0,3,10] Output: [0,1,9,16,100] Explanation: After squaring, the array becomes [16,1,0,9,100]. After sorting, it becomes [0,1,9,16,100]. Example 2:
@@ -231,10 +242,10 @@ class Solution { List&amp;lt;List&amp;lt;Integer&amp;gt;&amp;gt; res = new Array
     
     <item>
       <title>My LeetCode Diary - Day3 LinkedList</title>
-      <link>/articles/my-leetcode-diary-day3-linkedlist/</link>
+      <link>/articles/my-leetcode-diary-day03-linkedlist/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/articles/my-leetcode-diary-day3-linkedlist/</guid>
+      <guid>/articles/my-leetcode-diary-day03-linkedlist/</guid>
       <description>My LeetCode Diary - Day3 LinkedList 203. Remove Linked List Elements Link
 /** * Definition for singly-linked list. * public class ListNode { * int val; * ListNode next; * ListNode() {} * ListNode(int val) { this.val = val; } * ListNode(int val, ListNode next) { this.val = val; this.next = next; } * } */ class Solution { public ListNode removeElements(ListNode head, int val) { // [1，1，1，1，1，1，1] while (head !</description>
     </item>
@@ -281,20 +292,20 @@ class Solution { public boolean lemonadeChange(int[] bills) { int five = 0; int 
     
     <item>
       <title>My LeetCode Diary - Day4 LinkedList</title>
-      <link>/articles/my-leetcode-diary-day4-linkedlist/</link>
+      <link>/articles/my-leetcode-diary-day04-linkedlist/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/articles/my-leetcode-diary-day4-linkedlist/</guid>
+      <guid>/articles/my-leetcode-diary-day04-linkedlist/</guid>
       <description>My LeetCode Diary - Day4 LinkedList 24. Swap Nodes in Pairs Link
 /** * Definition for singly-linked list. * public class ListNode { * int val; * ListNode next; * ListNode() {} * ListNode(int val) { this.val = val; } * ListNode(int val, ListNode next) { this.val = val; this.next = next; } * } */ class Solution { public ListNode swapPairs(ListNode head) { ListNode dummy = new ListNode(-1); dummy.next = head; ListNode cur = dummy; ListNode temp; //node3 ListNode first; //node1 ListNode second; //node2 while (cur.</description>
     </item>
     
     <item>
       <title>My LeetCode Diary - Day6 HashTable</title>
-      <link>/articles/my-leetcode-diary-day6-hashtable/</link>
+      <link>/articles/my-leetcode-diary-day06-hashtable/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/articles/my-leetcode-diary-day6-hashtable/</guid>
+      <guid>/articles/my-leetcode-diary-day06-hashtable/</guid>
       <description>My LeetCode Diary - Day6 HashTable 242. Valid Anagram Link
 class Solution { public boolean isAnagram(String s, String t) { int[] hash = new int[26]; for (int i=0;i&amp;lt;s.length();i++) { hash[s.charAt(i)-&amp;#39;a&amp;#39;]++; } for (int i=0; i&amp;lt;t.length(); i++){ hash[t.charAt(i)-&amp;#39;a&amp;#39;]--; } for (int num : hash){ if (num != 0) { return false; } } return true; } } 202. Happy Number Link
 class Solution { public boolean isHappy(int n) { HashSet&amp;lt;Integer&amp;gt; seen = new HashSet&amp;lt;&amp;gt;(); while (n!</description>
@@ -302,10 +313,10 @@ class Solution { public boolean isHappy(int n) { HashSet&amp;lt;Integer&amp;gt; 
     
     <item>
       <title>My LeetCode Diary - Day7 HashTable</title>
-      <link>/articles/my-leetcode-diary-day7-hashtable/</link>
+      <link>/articles/my-leetcode-diary-day07-hashtable/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/articles/my-leetcode-diary-day7-hashtable/</guid>
+      <guid>/articles/my-leetcode-diary-day07-hashtable/</guid>
       <description>My LeetCode Diary - Day7 HashTable 454. 4Sum II Link
 nums1 = [1,2], nums2 = [-2,-1], nums3 = [-1,2], nums4 = [0,2]
 Iterated over nums1 and nums2, pairSums = {1 + (-2), 1 + (-1), 2 + (-2), 2 + (-1)} = {-1, 0, 0, 1} pairCountBySum = {-1 : 1, 0 : 2, 1 : 1}, i.e. there is 1 pair with sum = 1, 2 pairs with sum = 0, 1 pair with sum = -1</description>
@@ -313,10 +324,10 @@ Iterated over nums1 and nums2, pairSums = {1 + (-2), 1 + (-1), 2 + (-2), 2 + (-1
     
     <item>
       <title>My LeetCode Diary - Day8 String</title>
-      <link>/articles/my-leetcode-diary-day8-string/</link>
+      <link>/articles/my-leetcode-diary-day08-string/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/articles/my-leetcode-diary-day8-string/</guid>
+      <guid>/articles/my-leetcode-diary-day08-string/</guid>
       <description>My LeetCode Diary - Day8 String 344. Reverse String Link
 class Solution { public void reverseString(char[] s) { char[] newArray = new char[s.length]; for (int i = 0; i &amp;lt; s.length; i++) { newArray[i] = s[s.length - i - 1]; } for (int i = 0; i &amp;lt; s.length; i++) { s[i] = newArray[i]; } } } 541. Reverse String II Link
 class Solution { public String reverseStr(String s, int k) { StringBuilder sb = new StringBuilder(); while (s.</description>
@@ -324,10 +335,10 @@ class Solution { public String reverseStr(String s, int k) { StringBuilder sb = 
     
     <item>
       <title>My LeetCode Diary - Day9 String KMP</title>
-      <link>/articles/my-leetcode-diary-day9-string-kmp/</link>
+      <link>/articles/my-leetcode-diary-day09-string-kmp/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/articles/my-leetcode-diary-day9-string-kmp/</guid>
+      <guid>/articles/my-leetcode-diary-day09-string-kmp/</guid>
       <description>My LeetCode Diary - Day9 String KMP 28. Find the Index of the First Occurrence in a String Link
 class Solution { public String reverseWords(String s) { String ans = &amp;#34;&amp;#34;; int start = -1, end = -1; for (int i = s.length() - 1; i&amp;gt;=0; i--){ if(s.charAt(i) != &amp;#39; &amp;#39; &amp;amp;&amp;amp; end == -1){ end = i; } else if(s.charAt(i) == &amp;#39; &amp;#39; &amp;amp;&amp;amp; end != -1){ start = i + 1; ans = ans + s.</description>
     </item>
