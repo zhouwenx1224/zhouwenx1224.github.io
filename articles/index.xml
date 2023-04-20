@@ -275,7 +275,7 @@ class Solution { public int findContentChildren(int[] g, int[] s) { Arrays.sort(
     </item>
     
     <item>
-      <title>My LeetCode Diary - Day32 BackTracking</title>
+      <title>My LeetCode Diary - Day32 Greedy Algo</title>
       <link>/articles/my-leetcode-diary-day32-greedy-algo-dab85eea719b4bf4822b3f27f1b0aa31/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -285,7 +285,7 @@ class Solution { public int maxProfit(int[] prices) { int n = prices.length; int
     </item>
     
     <item>
-      <title>My LeetCode Diary - Day34 BackTracking</title>
+      <title>My LeetCode Diary - Day34 Greedy Algo</title>
       <link>/articles/my-leetcode-diary-day34-greedy-algo/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -295,7 +295,7 @@ class Solution { public int largestSumAfterKNegations(int[] A, int K) { if (A.le
     </item>
     
     <item>
-      <title>My LeetCode Diary - Day35 BackTracking</title>
+      <title>My LeetCode Diary - Day35 Greedy Algo</title>
       <link>/articles/my-leetcode-diary-day35-greedy-algo/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -305,7 +305,7 @@ class Solution { public boolean lemonadeChange(int[] bills) { int five = 0; int 
     </item>
     
     <item>
-      <title>My LeetCode Diary - Day36 BackTracking</title>
+      <title>My LeetCode Diary - Day36 Greedy Algo</title>
       <link>/articles/my-leetcode-diary-day36-greedy-algo/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -313,6 +313,17 @@ class Solution { public boolean lemonadeChange(int[] bills) { int five = 0; int 
       <description>My LeetCode Diary - Day36 Greedy Algo 435. Non-overlapping Intervals Link
 class Solution { public int eraseOverlapIntervals(int[][] intervals) { Arrays.sort(intervals, (a,b)-&amp;gt; { return Integer.compare(a[0],b[0]); }); int remove = 0; int pre = intervals[0][1]; for(int i = 1; i &amp;lt; intervals.length; i++) { if(pre &amp;gt; intervals[i][0]) { remove++; pre = Math.min(pre, intervals[i][1]); } else pre = intervals[i][1]; } return remove; } } 763. Partition Labels Link
 class Solution { public List&amp;lt;Integer&amp;gt; partitionLabels(String S) { List&amp;lt;Integer&amp;gt; list = new LinkedList&amp;lt;&amp;gt;(); int[] edge = new int[26]; char[] chars = S.</description>
+    </item>
+    
+    <item>
+      <title>My LeetCode Diary - Day38 Dynamic Programming</title>
+      <link>/articles/my-leetcode-diary-day38-dynamic-programming/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/articles/my-leetcode-diary-day38-dynamic-programming/</guid>
+      <description>My LeetCode Diary - Day38 Dynamic Programming 509. Fibonacci Number Link
+class Solution { public int fib(int n) { if (n&amp;lt;=1) { return n; } int[] dp = new int[n+1]; dp[0] = 0; dp[1] = 1; for (int i = 2; i &amp;lt;= n;i++) { dp[i] = dp[i-1] + dp[i-2]; } return dp[n]; } } 70. Climbing Stairs Link
+class Solution { public int climbStairs(int n) { if (n&amp;lt;=1) { return n; } int[] dp = new int[n+1]; dp[1] = 1; dp[2] = 2; for (int i = 3; i &amp;lt;= n;i++) { dp[i] = dp[i-1] + dp[i-2]; } return dp[n]; } } 746.</description>
     </item>
     
   </channel>
