@@ -354,5 +354,15 @@ class Solution { public int fib(int n) { if (n&amp;lt;=1) { return n; } int[] dp
 class Solution { public int climbStairs(int n) { if (n&amp;lt;=1) { return n; } int[] dp = new int[n+1]; dp[1] = 1; dp[2] = 2; for (int i = 3; i &amp;lt;= n;i++) { dp[i] = dp[i-1] + dp[i-2]; } return dp[n]; } } 746.</description>
     </item>
     
+    <item>
+      <title>My LeetCode Diary - Day39 Dynamic Programming</title>
+      <link>/articles/my-leetcode-diary-day39-dynamic-programming/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/articles/my-leetcode-diary-day39-dynamic-programming/</guid>
+      <description>My LeetCode Diary - Day39 Dynamic Programming 62. Unique Paths Link
+class Solution { public static int uniquePaths(int m, int n) { int[][] dp = new int[m][n]; for (int i = 0; i &amp;lt; m; i++) { dp[i][0] = 1; } for (int i = 0; i &amp;lt; n; i++) { dp[0][i] = 1; } for (int i = 1; i &amp;lt; m; i++) { for (int j = 1; j &amp;lt; n; j++) { dp[i][j] = dp[i-1][j]+dp[i][j-1]; } } return dp[m-1][n-1]; } } 63.</description>
+    </item>
+    
   </channel>
 </rss>
