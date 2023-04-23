@@ -336,5 +336,16 @@ class Solution { public int climbStairs(int n) { if (n&amp;lt;=1) { return n; } 
 class Solution { public static int uniquePaths(int m, int n) { int[][] dp = new int[m][n]; for (int i = 0; i &amp;lt; m; i++) { dp[i][0] = 1; } for (int i = 0; i &amp;lt; n; i++) { dp[0][i] = 1; } for (int i = 1; i &amp;lt; m; i++) { for (int j = 1; j &amp;lt; n; j++) { dp[i][j] = dp[i-1][j]+dp[i][j-1]; } } return dp[m-1][n-1]; } } 63.</description>
     </item>
     
+    <item>
+      <title>My LeetCode Diary - Day41 Dynamic Programming</title>
+      <link>/articles/my-leetcode-diary-day41-dynamic-programming/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/articles/my-leetcode-diary-day41-dynamic-programming/</guid>
+      <description>My LeetCode Diary - Day41 Dynamic Programming 343. Integer Break Link
+class Solution { public int integerBreak(int n) { int[] dp = new int[n+1]; dp[2] = 1; for (int i = 3; i &amp;lt;= n; i++) { for (int j = 1; j &amp;lt; i; j++){ dp[i] = Math.max(dp[i], Math.max(j*(i-j), j*dp[i-j])); } } return dp[n]; } } 96. Unique Binary Search Trees Link
+class Solution { public int numTrees(int n) { int[] dp = new int[n+1]; dp[0] = 1; dp[1] = 1; for (int i = 2; i &amp;lt;=n ; i++) { for (int j = 1; j &amp;lt;= i; j++) { dp[i] += dp[j-1] * dp[i-j]; } } return dp[n]; } } </description>
+    </item>
+    
   </channel>
 </rss>
