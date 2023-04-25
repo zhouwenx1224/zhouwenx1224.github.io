@@ -347,5 +347,15 @@ class Solution { public int integerBreak(int n) { int[] dp = new int[n+1]; dp[2]
 class Solution { public int numTrees(int n) { int[] dp = new int[n+1]; dp[0] = 1; dp[1] = 1; for (int i = 2; i &amp;lt;=n ; i++) { for (int j = 1; j &amp;lt;= i; j++) { dp[i] += dp[j-1] * dp[i-j]; } } return dp[n]; } } </description>
     </item>
     
+    <item>
+      <title>My LeetCode Diary - Day43 Dynamic Programming</title>
+      <link>/articles/my-leetcode-diary-day43-dynamic-programming/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/articles/my-leetcode-diary-day43-dynamic-programming/</guid>
+      <description>My LeetCode Diary - Day43 Dynamic Programming 1049. Last Stone Weight II Link
+class Solution { public int lastStoneWeightII(int[] stones) { int sum = 0; for (int s : stones) { sum += s; } int target = sum / 2; int[][] dp = new int[stones.length][target + 1]; for (int j = stones[0]; j &amp;lt;= target; j++) { dp[0][j] = stones[0]; } for (int i = 1; i &amp;lt; stones.length; i++) { for (int j = 1; j &amp;lt;= target; j++) { if (j &amp;gt;= stones[i]) { dp[i][j] = Math.</description>
+    </item>
+    
   </channel>
 </rss>
