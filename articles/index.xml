@@ -357,5 +357,16 @@ class Solution { public int numTrees(int n) { int[] dp = new int[n+1]; dp[0] = 1
 class Solution { public int lastStoneWeightII(int[] stones) { int sum = 0; for (int s : stones) { sum += s; } int target = sum / 2; int[][] dp = new int[stones.length][target + 1]; for (int j = stones[0]; j &amp;lt;= target; j++) { dp[0][j] = stones[0]; } for (int i = 1; i &amp;lt; stones.length; i++) { for (int j = 1; j &amp;lt;= target; j++) { if (j &amp;gt;= stones[i]) { dp[i][j] = Math.</description>
     </item>
     
+    <item>
+      <title>My LeetCode Diary - Day44 Dynamic Programming</title>
+      <link>/articles/my-leetcode-diary-day44-dynamic-programming/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/articles/my-leetcode-diary-day44-dynamic-programming/</guid>
+      <description>My LeetCode Diary - Day44 Dynamic Programming 518. Coin Change II Link
+class Solution { public int change(int amount, int[] coins) { int[] dp = new int[amount + 1]; dp[0] = 1; for (int i = 0; i &amp;lt; coins.length; i++) { for (int j = coins[i]; j &amp;lt;= amount; j++) { dp[j] += dp[j - coins[i]]; } } return dp[amount]; } } 377. Combination Sum IV Link
+class Solution { public int combinationSum4(int[] nums, int target) { int[] dp = new int[target + 1]; dp[0] = 1; for (int i = 0; i &amp;lt;= target; i++) { for (int j = 0; j &amp;lt; nums.</description>
+    </item>
+    
   </channel>
 </rss>
