@@ -396,5 +396,15 @@ class Solution { public int change(int amount, int[] coins) { int[] dp = new int
 class Solution { public int combinationSum4(int[] nums, int target) { int[] dp = new int[target + 1]; dp[0] = 1; for (int i = 0; i &amp;lt;= target; i++) { for (int j = 0; j &amp;lt; nums.</description>
     </item>
     
+    <item>
+      <title>My LeetCode Diary - Day45 Dynamic Programming</title>
+      <link>/articles/my-leetcode-diary-day45-dynamic-programming/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/articles/my-leetcode-diary-day45-dynamic-programming/</guid>
+      <description>My LeetCode Diary - Day45 Dynamic Programming 70. Climbing Stairs Link
+class Solution { public int climbStairs(int n) { int[] dp = new int[n + 1]; int[] weight = {1,2}; dp[0] = 1; for (int i = 0; i &amp;lt;= n; i++) { for (int j = 0; j &amp;lt; weight.length; j++) { if (i &amp;gt;= weight[j]) dp[i] += dp[i - weight[j]]; } } return dp[n]; } } 322. Coin Change Link</description>
+    </item>
+    
   </channel>
 </rss>
