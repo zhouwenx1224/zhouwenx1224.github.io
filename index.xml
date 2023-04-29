@@ -406,5 +406,15 @@ class Solution { public int combinationSum4(int[] nums, int target) { int[] dp =
 class Solution { public int climbStairs(int n) { int[] dp = new int[n + 1]; int[] weight = {1,2}; dp[0] = 1; for (int i = 0; i &amp;lt;= n; i++) { for (int j = 0; j &amp;lt; weight.length; j++) { if (i &amp;gt;= weight[j]) dp[i] += dp[i - weight[j]]; } } return dp[n]; } } 322. Coin Change Link</description>
     </item>
     
+    <item>
+      <title>My LeetCode Diary - Day46 Dynamic Programming</title>
+      <link>/articles/my-leetcode-diary-day46-dynamic-programming/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/articles/my-leetcode-diary-day46-dynamic-programming/</guid>
+      <description>My LeetCode Diary - Day46 Dynamic Programming 139. Word Break Link
+class Solution { public boolean wordBreak(String s, List&amp;lt;String&amp;gt; wordDict) { boolean[] dp = new boolean[s.length() + 1]; dp[0] = true; for (int i = 1; i &amp;lt;= s.length(); i++) { for (String word : wordDict) { int len = word.length(); if (i &amp;gt;= len &amp;amp;&amp;amp; dp[i - len] &amp;amp;&amp;amp; word.equals(s.substring(i - len, i))) { dp[i] = true; break; } } } return dp[s.</description>
+    </item>
+    
   </channel>
 </rss>
