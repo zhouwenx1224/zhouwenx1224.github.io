@@ -398,5 +398,15 @@ class Solution { public boolean wordBreak(String s, List&amp;lt;String&amp;gt; w
 class Solution { public int rob(int[] nums) { if (nums == null || nums.length == 0) return 0; if (nums.length == 1) return nums[0]; int[] dp = new int[nums.length]; dp[0] = nums[0]; dp[1] = Math.max(dp[0], nums[1]); for (int i = 2; i &amp;lt; nums.length; i++) { dp[i] = Math.max(dp[i - 1], dp[i - 2] + nums[i]); } return dp[nums.length - 1]; } } 213.</description>
     </item>
     
+    <item>
+      <title>My LeetCode Diary - Day49 Dynamic Programming</title>
+      <link>/articles/my-leetcode-diary-day49-dynamic-programming/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/articles/my-leetcode-diary-day49-dynamic-programming/</guid>
+      <description>My LeetCode Diary - Day49 Dynamic Programming 121. Best Time to Buy and Sell Stock Link
+class Solution { public int maxProfit(int[] prices) { int n = prices.length; int[][] dp = new int [n][2]; for (int i = 0; i &amp;lt; n; i++) { if (i-1 == -1) { dp[i][0] = 0; dp[i][1] = -prices[i]; continue; } dp[i][0] = Math.max(dp[i-1][0],dp[i-1][1] + prices[i]); dp[i][1] = Math.max(dp[i-1][1],-prices[i]); } return dp[n-1][0]; } } 122.</description>
+    </item>
+    
   </channel>
 </rss>
