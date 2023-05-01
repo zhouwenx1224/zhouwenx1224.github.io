@@ -416,5 +416,15 @@ class Solution { public int climbStairs(int n) { int[] dp = new int[n + 1]; int[
 class Solution { public boolean wordBreak(String s, List&amp;lt;String&amp;gt; wordDict) { boolean[] dp = new boolean[s.length() + 1]; dp[0] = true; for (int i = 1; i &amp;lt;= s.length(); i++) { for (String word : wordDict) { int len = word.length(); if (i &amp;gt;= len &amp;amp;&amp;amp; dp[i - len] &amp;amp;&amp;amp; word.equals(s.substring(i - len, i))) { dp[i] = true; break; } } } return dp[s.</description>
     </item>
     
+    <item>
+      <title>My LeetCode Diary - Day48 Dynamic Programming</title>
+      <link>/articles/my-leetcode-diary-day48-dynamic-programming/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/articles/my-leetcode-diary-day48-dynamic-programming/</guid>
+      <description>My LeetCode Diary - Day48 Dynamic Programming 198. House Robber Link
+class Solution { public int rob(int[] nums) { if (nums == null || nums.length == 0) return 0; if (nums.length == 1) return nums[0]; int[] dp = new int[nums.length]; dp[0] = nums[0]; dp[1] = Math.max(dp[0], nums[1]); for (int i = 2; i &amp;lt; nums.length; i++) { dp[i] = Math.max(dp[i - 1], dp[i - 2] + nums[i]); } return dp[nums.length - 1]; } } 213.</description>
+    </item>
+    
   </channel>
 </rss>
