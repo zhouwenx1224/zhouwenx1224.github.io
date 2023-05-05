@@ -456,5 +456,15 @@ class Solution { public int maxProfit(int[] prices) { int n = prices.length; int
 class Solution { public int maxProfit(int[] prices) { int n = prices.length; int[][] dp = new int[n][2]; for (int i = 0; i &amp;lt; n; i++) { if (i-1 == -1 ) { dp[i][0] = 0; dp[i][1] = -prices[i]; continue; } if (i-2 == -1) { dp[i][0] = Math.max(dp[i-1][0], dp[i-1][1] + prices[i]); dp[i][1] = Math.</description>
     </item>
     
+    <item>
+      <title>My LeetCode Diary - Day52 Dynamic Programming</title>
+      <link>/articles/my-leetcode-diary-day52-dynamic-programming/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/articles/my-leetcode-diary-day52-dynamic-programming/</guid>
+      <description>My LeetCode Diary - Day52 Dynamic Programming 300. Longest Increasing Subsequence Link
+class Solution { public int lengthOfLIS(int[] nums) { int[] dp = new int[nums.length]; Arrays.fill(dp, 1); for (int i = 0; i &amp;lt; dp.length; i++) { for (int j = 0; j &amp;lt; i; j++) { if (nums[i] &amp;gt; nums[j]) { dp[i] = Math.max(dp[i], dp[j] + 1); } } } int res = 0; for (int i = 0; i &amp;lt; dp.</description>
+    </item>
+    
   </channel>
 </rss>
