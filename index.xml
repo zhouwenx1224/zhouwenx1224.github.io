@@ -466,5 +466,15 @@ class Solution { public int maxProfit(int[] prices) { int n = prices.length; int
 class Solution { public int lengthOfLIS(int[] nums) { int[] dp = new int[nums.length]; Arrays.fill(dp, 1); for (int i = 0; i &amp;lt; dp.length; i++) { for (int j = 0; j &amp;lt; i; j++) { if (nums[i] &amp;gt; nums[j]) { dp[i] = Math.max(dp[i], dp[j] + 1); } } } int res = 0; for (int i = 0; i &amp;lt; dp.</description>
     </item>
     
+    <item>
+      <title>My LeetCode Diary - Day53 Dynamic Programming</title>
+      <link>/articles/my-leetcode-diary-day53-dynamic-programming/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/articles/my-leetcode-diary-day53-dynamic-programming/</guid>
+      <description>My LeetCode Diary - Day53 Dynamic Programming 1143. Longest Common Subsequence Link
+class Solution { public int longestCommonSubsequence(String text1, String text2) { int[][] dp = new int[text1.length() + 1][text2.length() + 1]; // 先对dp数组做初始化操作 for (int i = 1 ; i &amp;lt;= text1.length() ; i++) { char char1 = text1.charAt(i - 1); for (int j = 1; j &amp;lt;= text2.length(); j++) { char char2 = text2.charAt(j - 1); if (char1 == char2) { dp[i][j] = dp[i - 1][j - 1] + 1; } else { dp[i][j] = Math.</description>
+    </item>
+    
   </channel>
 </rss>
