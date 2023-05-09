@@ -468,5 +468,15 @@ class Solution { public boolean isSubsequence(String s, String t) { int length1 
 class Solution { public int minDistance(String word1, String word2) { int m = word1.length(); int n = word2.length(); int[][] dp = new int[m + 1][n + 1]; for (int i = 1; i &amp;lt;= m; i++) { dp[i][0] = i; } for (int j = 1; j &amp;lt;= n; j++) { dp[0][j] = j; } for (int i = 1; i &amp;lt;= m; i++) { for (int j = 1; j &amp;lt;= n; j++) { if (word1.</description>
     </item>
     
+    <item>
+      <title>My LeetCode Diary - Day57 Dynamic Programming</title>
+      <link>/articles/my-leetcode-diary-day57-dynamic-programming/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/articles/my-leetcode-diary-day57-dynamic-programming/</guid>
+      <description>My LeetCode Diary - Day57 Dynamic Programming 647. Palindromic Substrings Link
+class Solution { public int countSubstrings(String s) { int len, ans = 0; if (s == null || (len = s.length()) &amp;lt; 1) return 0; boolean[][] dp = new boolean[len][len]; for (int j = 0; j &amp;lt; len; j++) { for (int i = 0; i &amp;lt;= j; i++) { if (s.charAt(i) == s.charAt(j)) { if (j - i &amp;lt; 3) { dp[i][j] = true; } else { dp[i][j] = dp[i + 1][j - 1]; } } else { dp[i][j] = false; } } } for (int i = 0; i &amp;lt; len; i++) { for (int j = 0; j &amp;lt; len; j++) { if (dp[i][j]) ans++; } } return ans; } } 516.</description>
+    </item>
+    
   </channel>
 </rss>
