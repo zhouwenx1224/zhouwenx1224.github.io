@@ -476,5 +476,25 @@ class Solution { public int lengthOfLIS(int[] nums) { int[] dp = new int[nums.le
 class Solution { public int longestCommonSubsequence(String text1, String text2) { int[][] dp = new int[text1.length() + 1][text2.length() + 1]; // 先对dp数组做初始化操作 for (int i = 1 ; i &amp;lt;= text1.length() ; i++) { char char1 = text1.charAt(i - 1); for (int j = 1; j &amp;lt;= text2.length(); j++) { char char2 = text2.charAt(j - 1); if (char1 == char2) { dp[i][j] = dp[i - 1][j - 1] + 1; } else { dp[i][j] = Math.</description>
     </item>
     
+    <item>
+      <title>My LeetCode Diary - Day55 Dynamic Programming</title>
+      <link>/articles/my-leetcode-diary-day55-dynamic-programming/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/articles/my-leetcode-diary-day55-dynamic-programming/</guid>
+      <description>My LeetCode Diary - Day55 Dynamic Programming 392. Is Subsequence Link
+class Solution { public boolean isSubsequence(String s, String t) { int length1 = s.length(); int length2 = t.length(); int[][] dp = new int[length1+1][length2+1]; for(int i = 1; i &amp;lt;= length1; i++){ for(int j = 1; j &amp;lt;= length2; j++){ if(s.charAt(i-1) == t.charAt(j-1)){ dp[i][j] = dp[i-1][j-1] + 1; }else{ dp[i][j] = dp[i][j-1]; } } } if(dp[length1][length2] == length1){ return true; }else{ return false; } } } 115.</description>
+    </item>
+    
+    <item>
+      <title>My LeetCode Diary - Day56 Dynamic Programming</title>
+      <link>/articles/my-leetcode-diary-day56-dynamic-programming/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/articles/my-leetcode-diary-day56-dynamic-programming/</guid>
+      <description>My LeetCode Diary - Day56 Dynamic Programming 72. Edit Distance Link
+class Solution { public int minDistance(String word1, String word2) { int m = word1.length(); int n = word2.length(); int[][] dp = new int[m + 1][n + 1]; for (int i = 1; i &amp;lt;= m; i++) { dp[i][0] = i; } for (int j = 1; j &amp;lt;= n; j++) { dp[0][j] = j; } for (int i = 1; i &amp;lt;= m; i++) { for (int j = 1; j &amp;lt;= n; j++) { if (word1.</description>
+    </item>
+    
   </channel>
 </rss>
