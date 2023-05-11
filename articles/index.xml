@@ -478,5 +478,16 @@ class Solution { public int minDistance(String word1, String word2) { int m = wo
 class Solution { public int countSubstrings(String s) { int len, ans = 0; if (s == null || (len = s.length()) &amp;lt; 1) return 0; boolean[][] dp = new boolean[len][len]; for (int j = 0; j &amp;lt; len; j++) { for (int i = 0; i &amp;lt;= j; i++) { if (s.charAt(i) == s.charAt(j)) { if (j - i &amp;lt; 3) { dp[i][j] = true; } else { dp[i][j] = dp[i + 1][j - 1]; } } else { dp[i][j] = false; } } } for (int i = 0; i &amp;lt; len; i++) { for (int j = 0; j &amp;lt; len; j++) { if (dp[i][j]) ans++; } } return ans; } } 516.</description>
     </item>
     
+    <item>
+      <title>My LeetCode Diary - Day58 Monotonic Stack</title>
+      <link>/articles/my-leetcode-diary-day58-monotonic-stack/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/articles/my-leetcode-diary-day58-monotonic-stack/</guid>
+      <description>My LeetCode Diary - Day58 Monotonic Stack 739. Daily Temperatures Link
+class Solution { public int[] dailyTemperatures(int[] temperatures) { int lens=temperatures.length; int []res=new int[lens]; Deque&amp;lt;Integer&amp;gt; stack=new LinkedList&amp;lt;&amp;gt;(); for(int i=0;i&amp;lt;lens;i++){ while(!stack.isEmpty()&amp;amp;&amp;amp;temperatures[i]&amp;gt;temperatures[stack.peek()]){ res[stack.peek()]=i-stack.peek(); stack.pop(); } stack.push(i); } return res; } } 496. Next Greater Element I Link
+class Solution { public int[] nextGreaterElement(int[] nums1, int[] nums2) { HashMap&amp;lt;Integer, Integer&amp;gt; map = new HashMap&amp;lt;&amp;gt;(); for (int i = 0; i &amp;lt; nums1.length; i++) { map.</description>
+    </item>
+    
   </channel>
 </rss>
