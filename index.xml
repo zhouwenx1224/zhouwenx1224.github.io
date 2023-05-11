@@ -517,5 +517,15 @@ class Solution { public int[] dailyTemperatures(int[] temperatures) { int lens=t
 class Solution { public int[] nextGreaterElement(int[] nums1, int[] nums2) { HashMap&amp;lt;Integer, Integer&amp;gt; map = new HashMap&amp;lt;&amp;gt;(); for (int i = 0; i &amp;lt; nums1.length; i++) { map.</description>
     </item>
     
+    <item>
+      <title>My LeetCode Diary - Day59 Monotonic Stack</title>
+      <link>/articles/my-leetcode-diary-day59-monotonic-stack/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/articles/my-leetcode-diary-day59-monotonic-stack/</guid>
+      <description>My LeetCode Diary - Day59 Monotonic Stack 503. Next Greater Element II Link
+class Solution { public int[] nextGreaterElements(int[] nums) { if(nums == null || nums.length &amp;lt;= 1) { return new int[]{-1}; } int size = nums.length; int[] result = new int[size]; Arrays.fill(result,-1); Stack&amp;lt;Integer&amp;gt; st= new Stack&amp;lt;&amp;gt;(); for(int i = 0; i &amp;lt; 2*size; i++) { while(!st.empty() &amp;amp;&amp;amp; nums[i % size] &amp;gt; nums[st.peek()]) { result[st.peek()] = nums[i % size]; st.pop(); } st.</description>
+    </item>
+    
   </channel>
 </rss>
