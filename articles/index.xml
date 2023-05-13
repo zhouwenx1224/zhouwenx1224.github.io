@@ -499,5 +499,15 @@ class Solution { public int[] nextGreaterElement(int[] nums1, int[] nums2) { Has
 class Solution { public int[] nextGreaterElements(int[] nums) { if(nums == null || nums.length &amp;lt;= 1) { return new int[]{-1}; } int size = nums.length; int[] result = new int[size]; Arrays.fill(result,-1); Stack&amp;lt;Integer&amp;gt; st= new Stack&amp;lt;&amp;gt;(); for(int i = 0; i &amp;lt; 2*size; i++) { while(!st.empty() &amp;amp;&amp;amp; nums[i % size] &amp;gt; nums[st.peek()]) { result[st.peek()] = nums[i % size]; st.pop(); } st.</description>
     </item>
     
+    <item>
+      <title>My LeetCode Diary - Day60 Monotonic Stack</title>
+      <link>/articles/my-leetcode-diary-day60-monotonic-stack/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/articles/my-leetcode-diary-day60-monotonic-stack/</guid>
+      <description>My LeetCode Diary - Day60 Monotonic Stack 84. Largest Rectangle in Histogram Link
+class Solution { int largestRectangleArea(int[] heights) { Stack&amp;lt;Integer&amp;gt; st = new Stack&amp;lt;Integer&amp;gt;(); int [] newHeights = new int[heights.length + 2]; newHeights[0] = 0; newHeights[newHeights.length - 1] = 0; for (int index = 0; index &amp;lt; heights.length; index++){ newHeights[index + 1] = heights[index]; } heights = newHeights; st.push(0); int result = 0; for (int i = 1; i &amp;lt; heights.</description>
+    </item>
+    
   </channel>
 </rss>
